@@ -1,6 +1,6 @@
 module.exports = (sequelize, Datatypes) => {
-  const Users = sequelize.define('users', {
-    username: Datatypes.STRING,
+  const Users = sequelize.define('Users', {
+    userName: Datatypes.STRING,
     email: Datatypes.STRING,
     firstName: Datatypes.STRING,
     lastName: Datatypes.STRING,
@@ -15,10 +15,6 @@ module.exports = (sequelize, Datatypes) => {
   },);
   // eslint-disable-next-line func-names
   Users.associate = function (models) {
-    Users.hasMany(models.requests, {
-      targetKey: 'userId',
-      sourceKey: 'id'
-    });
     Users.belongsTo(models.Role, {
       as: 'Role',
       foreignKey: 'role',
