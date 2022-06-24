@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
-    "jsdom": "15.1.1",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "passport-mock-strategy": "^2.0.0",
     "zombie": "^6.1.4"
